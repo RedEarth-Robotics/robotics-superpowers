@@ -141,6 +141,8 @@ already use it in another harness.
 
 ## Robotics Skills
 
+All robotics skills are accessed through the `robotics-superpowers` gateway skill, which auto-triggers when you mention robotics topics and routes you to the correct specialized expertise.
+
 This fork includes 7 specialized robotics skills that integrate seamlessly with the Superpowers workflow:
 
 ### ROS & Systems
