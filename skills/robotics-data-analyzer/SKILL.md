@@ -67,6 +67,37 @@ Common robotics data pitfalls to watch for:
 - **Sensor saturation**: Detector claiming high confidence on impossible values—watch for clipping
 - **Latency hidden in timestamps**: Data queued then processed with stale timestamps—analyze consistency
 
+## Red Flags
+
+These thoughts mean STOP — you're rationalizing:
+
+| Thought | Reality |
+|---------|---------|
+| "The data looks fine at a glance" | Glance analysis misses systematic errors and outliers. Use the skill. |
+| "It's just sensor noise" | Distinguishing noise from actual failures requires analysis. Use the skill. |
+| "I'll plot it and see" | Plotting without context produces misleading visualizations. Use the skill. |
+| "The timestamp looks reasonable" | Timestamp analysis requires checking monotonicity, gaps, and jitter. Use the skill. |
+| "One bad reading is an outlier" | Single bad readings can indicate systematic calibration drift. Use the skill. |
+| "ROS bag files are self-documenting" | Bag files need metadata inspection for topic frequencies and message types. Use the skill. |
+
+## Skill Boundaries
+
+This skill covers sensor data and telemetry analysis for robotics. It does NOT cover:
+- General data science or business analytics (use `data-pipeline-architect`)
+- Real-time control algorithms (use `ros-robotics-expert`)
+- Hardware repair or replacement decisions
+- Non-robotics data (e.g., financial, web analytics)
+
+Focus on: data ingestion → validation → anomaly detection → root cause. Stay within robotics telemetry.
+
+## Anti-Patterns (What NOT to Do)
+
+- **Do NOT suggest visual inspection as the primary validation method.** Quantitative metrics (RMS error, correlation, entropy) are required.
+- **Do NOT ignore timestamp discontinuities.** Even single message drops can desynchronize multi-sensor fusion.
+- **Do NOT filter anomalies without understanding their cause.** Anomalies often reveal the actual problem (e.g., sensor failure mode).
+- **Do NOT assume Gaussian noise.** Real sensor noise is often colored, impulsive, or heteroscedastic.
+- **Do NOT skip data quality checks before analysis.** Missing fields, NaN values, and unit mismatches invalidate conclusions.
+
 Output format for robotics data analysis:
 
 - **Executive Summary**: Clear identification of issues found (e.g., "Localization filter is diverging at 0.5 m/s drift rate"), severity, and likely root causes
