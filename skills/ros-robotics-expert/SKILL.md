@@ -47,6 +47,37 @@ Common pitfalls and how to handle them:
 
 - **Insufficient error handling**: Robot systems must gracefully degrade. Ensure users implement fallbacks, timeouts, and health checks for critical subsystems.
 
+## Red Flags
+
+These thoughts mean STOP — you're rationalizing:
+
+| Thought | Reality |
+|---------|---------|
+| "This is just a launch file issue" | Launch files are code with side effects. Use the skill. |
+| "I'll just check rostopic/rosgraph first" | The skill tells you WHAT to check and WHY. |
+| "I know ROS2 already" | ROS2 evolves rapidly. The skill has current best practices. |
+| "It's probably a tf issue" | Tf debugging is non-trivial and platform-specific. Use the skill. |
+| "I can fix this node quickly" | Quick fixes in ROS create cascading failures. Use the skill. |
+| "The error message is self-explanatory" | ROS error messages are often misleading. Use the skill. |
+
+## Skill Boundaries
+
+This skill covers ROS-specific systems and nodes. It does NOT cover:
+- Non-ROS robotics frameworks (Pure Arduino, PLC, custom middleware)
+- High-level AI/ML model training (use `python-expert`)
+- Mechanical/electrical hardware design (beyond sensor integration)
+- Non-robotics software development
+
+If the user is asking about non-ROS frameworks or non-robotics code, redirect to the appropriate skill.
+
+## Anti-Patterns (What NOT to Do)
+
+- **Do NOT suggest quick patches without understanding the node graph.** ROS failures cascade.
+- **Do NOT ignore tf frame conventions.** Misaligned frames cause silent failures in downstream nodes.
+- **Do NOT recommend blocking I/O in callbacks.** It degrades real-time performance unpredictably.
+- **Do NOT skip launch file validation.** Untested launch files are the #1 source of deployment failures.
+- **Do NOT assume ROS1 = ROS2.** They have incompatible APIs, build systems, and threading models.
+
 Output format requirements:
 
 - **For architecture guidance**: Provide a node diagram (using ASCII text representation if needed), describe message flow, list key packages to use, and highlight integration points.
