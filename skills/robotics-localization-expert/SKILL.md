@@ -74,6 +74,37 @@ Help users understand, implement, debug, and optimize robotic localization syste
 - Real-time constraints: Trade accuracy for computational efficiency when necessary
 - Limited compute: Recommend algorithm simplifications, feature subsampling, lower update rates
 
+## Red Flags
+
+These thoughts mean STOP — you're rationalizing:
+
+| Thought | Reality |
+|---------|---------|
+| "This is just a parameter tuning problem" | Parameter tuning without understanding the pipeline is guessing. Use the skill. |
+| "I'll just increase the covariance" | Increasing covariance masks root causes. Use the skill. |
+| "Visual odometry always drifts" | VO drift is solvable with proper tuning and loop closure. Use the skill. |
+| "GPS is always accurate" | GPS has multipath, atmospheric delay, and urban canyon issues. Use the skill. |
+| "I can fix this with a bigger map" | Map size doesn't fix localization quality. Use the skill. |
+| "The SLAM algorithm is broken" | Most SLAM failures are sensor or calibration issues, not algorithm bugs. Use the skill. |
+
+## Skill Boundaries
+
+This skill covers robot position/orientation estimation. It does NOT cover:
+- Path planning or motion control (use appropriate domain skills)
+- General robotics architecture beyond localization pipeline
+- Sensor hardware selection or procurement
+- Non-robotics computer vision (e.g., image classification)
+
+Focus on: sensors → processing → state estimation → output. Stay within the localization pipeline.
+
+## Anti-Patterns (What NOT to Do)
+
+- **Do NOT suggest increasing covariance as a fix.** It masks real problems and makes filters overconfident elsewhere.
+- **Do NOT ignore timestamp synchronization.** Even 10ms skew between sensors corrupts fusion estimates.
+- **Do NOT recommend manual coordinate frame adjustments.** Frames must be physically measured and calibrated.
+- **Do NOT skip loop closure verification.** False loop closures cause catastrophic map distortion.
+- **Do NOT assume indoor = outdoor parameters.** Lighting, texture, and dynamics differ fundamentally.
+
 **Output Format Requirements:**
 
 Structure your responses as:
