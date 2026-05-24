@@ -112,6 +112,31 @@ When multiple skills could apply, use this order:
 
 The skill itself tells you which.
 
+## Domain-Specific Skills
+
+Superpowers includes specialized skills for specific domains:
+
+**Robotics & Automation:**
+- `robotics-superpowers` — Gateway skill that auto-triggers on robotics topics and routes to specialized skills
+- `ros-robotics-expert` - ROS (Robot Operating System) for robotics arms and mobile robotics
+- `robotics-localization-expert` - Robotics localization problems including visual odometry, SLAM, GPS-based localization
+- `robotics-odometry-expert` - Robotics odometry problems including visual odometry, ground-based odometry, underwater odometry
+- `robotics-data-analyzer` - Analyze robotics sensor data, perception systems, localization systems, vehicle hardware telemetry
+- `robotics-devops-engineer` - Deploy, containerize, and automate robotics code for production environments
+- `fusion-filter-robotics-expert` - Fusion filters, sensor fusion, and localization challenges in robotics systems
+- `gps-ins-localization-expert` - GPS and INS (Inertial Navigation System) integration for robotics localization
+
+**Software Engineering:**
+- `python-expert` - Python code, debugging, optimization, and best practices
+- `cpp-pro` - C/C++ code review for bugs, security issues, logic errors, performance problems
+- `cpp-misra-auditor` - C++ code review for safety and compliance, especially MISRA standards
+- `matlab-pro` - MATLAB code, Simulink models, and related technical problems
+- `linux-ubuntu-expert` - Linux or Ubuntu system administration, configuration, troubleshooting
+- `security-pentester` - Security assessments, penetration testing, and vulnerability identification
+- `data-pipeline-architect` - Design, build, or optimize data pipelines and collection systems
+
+These domain-specific skills have detailed trigger phrases and examples in their descriptions.
+
 ## User Instructions
 
 Instructions say WHAT, not HOW. "Add X" or "Fix Y" doesn't mean skip workflows.
