@@ -1,32 +1,12 @@
-# Superpowers
+# Superpowers for Robotics
 
-Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.
+Superpowers for Robotics is a specialized fork of [Superpowers](https://github.com/obra/superpowers), enhanced with domain-specific skills for robotics development and integrated with [Yato](https://github.com/RedEarth-Robotics/yato) token optimization.
+
+This fork extends the original Superpowers methodology with 7 new robotics skills, enabling your AI coding agent to tackle ROS development, sensor fusion, localization, odometry, and robotics DevOps with expert-level guidance.
 
 ## Quickstart
 
-Give your agent Superpowers: [Claude Code](#claude-code), [Codex CLI](#codex-cli), [Codex App](#codex-app), [Factory Droid](#factory-droid), [Gemini CLI](#gemini-cli), [OpenCode](#opencode), [Cursor](#cursor), [GitHub Copilot CLI](#github-copilot-cli).
-
-## How it works
-
-It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. 
-
-Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. 
-
-After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. 
-
-Next up, once you say "go", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for Claude to be able to work autonomously for a couple hours at a time without deviating from the plan you put together.
-
-There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers.
-
-
-## Sponsorship
-
-If Superpowers has helped you do stuff that makes money and you are so inclined, I'd greatly appreciate it if you'd consider [sponsoring my opensource work](https://github.com/sponsors/obra).
-
-Thanks! 
-
-- Jesse
-
+Give your agent Superpowers for Robotics: [Claude Code](#claude-code), [Codex CLI](#codex-cli), [Codex App](#codex-app), [Factory Droid](#factory-droid), [Gemini CLI](#gemini-cli), [OpenCode](#opencode), [Cursor](#cursor), [GitHub Copilot CLI](#github-copilot-cli).
 
 ## Installation
 
@@ -151,83 +131,100 @@ already use it in another harness.
   copilot plugin install superpowers@superpowers-marketplace
   ```
 
-## The Basic Workflow
+## Robotics Skills
 
-1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document.
+This fork includes 7 specialized robotics skills that integrate seamlessly with the Superpowers workflow:
 
-2. **using-git-worktrees** - Activates after design approval. Creates isolated workspace on new branch, runs project setup, verifies clean test baseline.
+### ROS & Systems
+- **`ros-robotics-expert`** — ROS (Robot Operating System) for robotics arms and mobile robotics
+  - *Trigger:* "help me with ROS", "debug my ROS issue", "should I use ROS1 or ROS2?"
+  - Covers: nodes, topics, services, sensor integration, real-time constraints, Gazebo simulation
 
-3. **writing-plans** - Activates with approved design. Breaks work into bite-sized tasks (2-5 minutes each). Every task has exact file paths, complete code, verification steps.
+### Localization & Navigation
+- **`robotics-localization-expert`** — Visual odometry, SLAM, GPS-based localization, sensor fusion
+  - *Trigger:* "my robot keeps drifting", "SLAM implementation issues", "how do I improve localization accuracy?"
+  - Covers: ORB-SLAM, LiDAR SLAM, particle filters, Kalman filters, loop closure
 
-4. **subagent-driven-development** or **executing-plans** - Activates with plan. Dispatches fresh subagent per task with two-stage review (spec compliance, then code quality), or executes in batches with human checkpoints.
+- **`gps-ins-localization-expert`** — GPS and INS (Inertial Navigation System) integration
+  - *Trigger:* "GPS signal is lost", "should I use GPS or INS?", "analyze this GPS/INS error"
+  - Covers: DGPS, RTK, sensor fusion algorithms, GPS denial scenarios
 
-5. **test-driven-development** - Activates during implementation. Enforces RED-GREEN-REFACTOR: write failing test, watch it fail, write minimal code, watch it pass, commit. Deletes code written before tests.
+### Odometry & Motion
+- **`robotics-odometry-expert`** — Visual, ground-based, and underwater odometry systems
+  - *Trigger:* "visual odometry is drifting", "analyze this odometry log", "how do I improve odometry accuracy?"
+  - Covers: wheel encoders, IMU fusion, DVL, feature tracking, slip estimation
 
-6. **requesting-code-review** - Activates between tasks. Reviews against plan, reports issues by severity. Critical issues block progress.
+### Data & Analysis
+- **`robotics-data-analyzer`** — Sensor data, perception systems, localization analysis
+  - *Trigger:* "analyze this sensor data", "debug my perception issues", "process these ROS logs"
+  - Covers: multi-sensor analysis, ROS bag files, temporal alignment, statistical rigor
 
-7. **finishing-a-development-branch** - Activates when tasks complete. Verifies tests, presents options (merge/PR/keep/discard), cleans up worktree.
+- **`fusion-filter-robotics-expert`** — Kalman filters, sensor fusion, localization challenges
+  - *Trigger:* "help me implement a Kalman filter", "my EKF is diverging", "how do I fuse GPS and IMU data?"
+  - Covers: EKF, UKF, particle filters, multi-hypothesis tracking, observability analysis
+
+### DevOps & Deployment
+- **`robotics-devops-engineer`** — Deploy and containerize robotics code for production
+  - *Trigger:* "help me deploy this robotics code", "containerize our robotics application", "set up a CI/CD pipeline for our robot"
+  - Covers: Docker, Kubernetes, Ansible, CI/CD, hardware-in-the-loop testing
+
+## Yato Token Optimization
+
+This fork integrates [Yato](https://github.com/RedEarth-Robotics/yato) — a token optimization framework designed for large-scale robotics projects.
+
+### Benefits for Robotics Development
+
+- **Reduced Token Usage** — Yato's compression and filtering reduces context window consumption when working with large robotics codebases
+- **AST-Aware Extraction** — Extract relevant code context from ROS packages, sensor drivers, and control systems without losing structural information
+- **Smart Context Filtering** — Prioritize relevant sensor data, configuration files, and algorithm implementations during debugging sessions
+- **Robotics Workflow Optimization** — Automatically manage context when analyzing multi-sensor data streams or complex ROS node graphs
+
+### How It Works
+
+Yato integrates with the Superpowers skills system, automatically optimizing token usage when robotics skills are invoked. When you ask your agent to debug localization drift or review ROS code, Yato ensures the most relevant context is preserved while keeping token usage efficient.
+
+## The Robotics Workflow
+
+The core Superpowers workflow remains unchanged, but robotics skills auto-trigger at the right moments:
+
+1. **brainstorming** — Before writing ROS nodes or sensor fusion algorithms, the agent explores requirements and design alternatives
+
+2. **using-git-worktrees** — Creates isolated workspace for robotics features (e.g., "add LiDAR support")
+
+3. **writing-plans** — Breaks robotics tasks into bite-sized steps with exact file paths and verification
+
+4. **subagent-driven-development** — Dispatches fresh agents per robotics task (implement sensor driver → review → integrate)
+
+5. **test-driven-development** — Enforces RED-GREEN-REFACTOR for robotics code (critical for safety)
+
+6. **robotics skills auto-trigger** — When you mention "ROS", "localization", "odometry", or "sensor fusion", relevant skills activate automatically
+
+**Example:** Say "My robot is drifting in SLAM" → `robotics-localization-expert` activates → systematic diagnosis → fix plan → implementation with TDD.
 
 **The agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.
 
-## What's Inside
-
-### Skills Library
-
-**Testing**
-- **test-driven-development** - RED-GREEN-REFACTOR cycle (includes testing anti-patterns reference)
-
-**Debugging**
-- **systematic-debugging** - 4-phase root cause process (includes root-cause-tracing, defense-in-depth, condition-based-waiting techniques)
-- **verification-before-completion** - Ensure it's actually fixed
-
-**Collaboration** 
-- **brainstorming** - Socratic design refinement
-- **writing-plans** - Detailed implementation plans
-- **executing-plans** - Batch execution with checkpoints
-- **dispatching-parallel-agents** - Concurrent subagent workflows
-- **requesting-code-review** - Pre-review checklist
-- **receiving-code-review** - Responding to feedback
-- **using-git-worktrees** - Parallel development branches
-- **finishing-a-development-branch** - Merge/PR decision workflow
-- **subagent-driven-development** - Fast iteration with two-stage review (spec compliance, then code quality)
-
-**Meta**
-- **writing-skills** - Create new skills following best practices (includes testing methodology)
-- **using-superpowers** - Introduction to the skills system
-
 ## Philosophy
 
-- **Test-Driven Development** - Write tests first, always
-- **Systematic over ad-hoc** - Process over guessing
-- **Complexity reduction** - Simplicity as primary goal
-- **Evidence over claims** - Verify before declaring success
+- **Test-Driven Development** — Write tests first, always (especially critical for safety in robotics)
+- **Systematic over ad-hoc** — Process over guessing (vital when debugging multi-sensor systems)
+- **Complexity reduction** — Simplicity as primary goal (key for maintainable robotics systems)
+- **Evidence over claims** — Verify before declaring success (essential for reliable robot behavior)
 
 Read [the original release announcement](https://blog.fsck.com/2025/10/09/superpowers/).
 
-## Contributing
+## Original Repository
 
-The general contribution process for Superpowers is below. Keep in mind that we don't generally accept contributions of new skills and that any updates to skills must work across all of the coding agents we support.
+This project is a fork of [Superpowers](https://github.com/obra/superpowers) by [Jesse Vincent](https://blog.fsck.com) and the team at [Prime Radiant](https://primeradiant.com).
 
-1. Fork the repository
-2. Switch to the 'dev' branch
-3. Create a branch for your work
-4. Follow the `writing-skills` skill for creating and testing new and modified skills
-5. Submit a PR, being sure to fill in the pull request template.
+- **Upstream:** https://github.com/obra/superpowers
+- **Purpose:** This fork adds robotics-specific skills and Yato integration to the core Superpowers methodology
+- **Contributing:** Core Superpowers improvements should be submitted upstream. Robotics-specific enhancements are maintained in this fork.
 
-See `skills/writing-skills/SKILL.md` for the complete guide.
-
-## Updating
-
-Superpowers updates are somewhat coding-agent dependent, but are often automatic.
+**Community:**
+- **Discord:** [Join the Superpowers community](https://discord.gg/35wsABTejz)
+- **Issues:** https://github.com/obra/superpowers/issues
+- **Release announcements:** [Sign up](https://primeradiant.com/superpowers/)
 
 ## License
 
 MIT License - see LICENSE file for details
-
-## Community
-
-Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of the folks at [Prime Radiant](https://primeradiant.com).
-
-- **Discord**: [Join us](https://discord.gg/35wsABTejz) for community support, questions, and sharing what you're building with Superpowers
-- **Issues**: https://github.com/obra/superpowers/issues
-- **Release announcements**: [Sign up](https://primeradiant.com/superpowers/) to get notified about new versions
