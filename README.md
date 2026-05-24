@@ -10,6 +10,14 @@ Give your agent Superpowers for Robotics: [Claude Code](#claude-code), [Codex CL
 
 ## Installation
 
+**First, install the original Superpowers** using the instructions for your harness below. Then, clone this fork to access the robotics skills and Yato integration.
+
+```bash
+git clone https://github.com/RedEarth-Robotics/robotics-superpowers.git
+```
+
+The robotics skills are located in the `skills/` directory and can be loaded alongside your main Superpowers installation.
+
 Installation differs by harness. If you use more than one, install Superpowers separately for each one.
 
 ### Claude Code
@@ -136,13 +144,13 @@ already use it in another harness.
 This fork includes 7 specialized robotics skills that integrate seamlessly with the Superpowers workflow:
 
 ### ROS & Systems
-- **`ros-robotics-expert`** — ROS (Robot Operating System) for robotics arms and mobile robotics
+- **`ros-robotics-expert`** — ROS (Robot Operating System) for robotic arms and mobile robotics
   - *Trigger:* "help me with ROS", "debug my ROS issue", "should I use ROS1 or ROS2?"
   - Covers: nodes, topics, services, sensor integration, real-time constraints, Gazebo simulation
 
 ### Localization & Navigation
 - **`robotics-localization-expert`** — Visual odometry, SLAM, GPS-based localization, sensor fusion
-  - *Trigger:* "my robot keeps drifting", "SLAM implementation issues", "how do I improve localization accuracy?"
+  - *Trigger:* "my robot keeps drifting", "how do I fix my SLAM?", "how do I improve localization accuracy?"
   - Covers: ORB-SLAM, LiDAR SLAM, particle filters, Kalman filters, loop closure
 
 - **`gps-ins-localization-expert`** — GPS and INS (Inertial Navigation System) integration
@@ -197,7 +205,7 @@ The core Superpowers workflow remains unchanged, but robotics skills auto-trigge
 
 5. **test-driven-development** — Enforces RED-GREEN-REFACTOR for robotics code (critical for safety)
 
-6. **robotics skills auto-trigger** — When you mention "ROS", "localization", "odometry", or "sensor fusion", relevant skills activate automatically
+6. **robotics-skills-auto-trigger** — When you mention "ROS", "localization", "odometry", or "sensor fusion", relevant skills activate automatically
 
 **Example:** Say "My robot is drifting in SLAM" → `robotics-localization-expert` activates → systematic diagnosis → fix plan → implementation with TDD.
 
