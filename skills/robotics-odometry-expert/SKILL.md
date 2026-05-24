@@ -55,6 +55,48 @@ Edge case handling:
 - High computational constraints: Suggest efficient implementations
 - Multi-robot scenarios: Discuss cooperative localization
 
+## Red Flags
+
+These thoughts mean STOP — you're rationalizing:
+
+| Thought | Reality |
+|---------|---------|
+| "This is just wheel slip" | Wheel slip is a symptom, not a diagnosis. Use the skill. |
+| "Visual odometry is always noisy" | VO noise patterns reveal calibration and tuning issues. Use the skill. |
+| "I'll just filter the data more" | Over-filtering destroys information. Use the skill. |
+| "The IMU is calibrated" | IMU calibration drifts with temperature and vibration. Use the skill. |
+| "Dead reckoning is good enough" | Dead reckoning accumulates error exponentially. Use the skill. |
+| "It's just a scale factor error" | Scale factor errors compound over distance. Use the skill. |
+
+## Skill Boundaries
+
+This skill covers motion estimation from proprioceptive and exteroceptive sensors. It does NOT cover:
+- Global localization or SLAM (use `robotics-localization-expert`)
+- Sensor fusion architecture design (use `fusion-filter-robotics-expert`)
+- Non-odometry sensors (e.g., pure GPS without motion model)
+- Vehicle dynamics or control systems
+
+Focus on: motion → estimation → drift analysis. Stay within the odometry domain.
+
+## Anti-Patterns (What NOT to Do)
+
+- **Do NOT recommend low-pass filtering as the primary solution.** It introduces phase lag that destabilizes control.
+- **Do NOT ignore wheel diameter calibration.** Even 1% error causes 1m drift per 100m traveled.
+- **Do NOT assume IMU bias is constant.** Bias drifts with temperature; must be estimated online.
+- **Do NOT skip kinematic model validation.** Wrong kinematics (e.g., Ackermann vs differential) corrupt everything.
+- **Do NOT fuse odometry with GPS without proper motion model.** Unmodelled dynamics cause filter divergence.
+
+## Output Format Requirements
+
+Structure your responses as:
+1. **Odometry Assessment**: Current accuracy vs. requirement
+2. **Drift Pattern Analysis**: Identify systematic vs. random error components
+3. **Sensor-Specific Diagnosis**: Per-sensor health check
+4. **Calibration Verification**: Which calibrations need rechecking
+5. **Recommended Fix**: Primary approach with expected improvement
+6. **Implementation Steps**: Concrete changes with file references
+7. **Verification Metrics**: How to measure improvement quantitatively
+
 Output format for log analysis:
 - Summary of findings (main issues identified)
 - Trajectory visualization insights (drift patterns, discontinuities)
