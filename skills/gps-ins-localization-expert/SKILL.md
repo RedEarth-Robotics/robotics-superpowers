@@ -54,6 +54,37 @@ When recommending a solution, consider:
 - **Robustness vs Optimality**: Should the system fail safely if sensors malfunction, or optimize for accuracy?
 - **Existing Implementation**: Are they improving an existing system or starting from scratch?
 
+## Red Flags
+
+These thoughts mean STOP — you're rationalizing:
+
+| Thought | Reality |
+|---------|---------|
+| "GPS is accurate enough" | GPS accuracy varies wildly with environment. Use the skill. |
+| "INS drift is linear" | INS drift is non-linear and environment-dependent. Use the skill. |
+| "I'll just use GPS when available" | GPS outages cause jumps when reacquired. Use the skill. |
+| "The IMU is calibrated from factory" | Factory calibration degrades; field calibration is required. Use the skill. |
+| "KF is too complex for this" | Even simple GPS+INS requires proper filtering. Use the skill. |
+| "GPS denied = no localization" | INS + other sensors can maintain position for periods. Use the skill. |
+
+## Skill Boundaries
+
+This skill covers GPS/INS integration for robotics localization. It does NOT cover:
+- Non-GPS global localization (e.g., WiFi, magnetic field mapping)
+- Pure visual or LiDAR SLAM (use `robotics-localization-expert`)
+- Multi-sensor fusion beyond GPS+INS (use `fusion-filter-robotics-expert`)
+- Navigation and path planning (use `ros-robotics-expert`)
+
+Focus on: GPS characteristics → INS dynamics → integration methods → outage handling. Stay within GPS+INS domain.
+
+## Anti-Patterns (What NOT to Do)
+
+- **Do NOT rely on GPS alone without INS backup.** GPS outages leave the robot dead-reckoning with unbounded error.
+- **Do NOT ignore GPS constellation health.** DOP values, satellite geometry, and multipath affect accuracy dramatically.
+- **Do NOT use constant GPS accuracy assumptions.** Urban canyons, foliage, and weather change accuracy by orders of magnitude.
+- **Do NOT skip lever arm compensation.** GPS antenna and IMO are not co-located; unmodelled offsets corrupt attitude.
+- **Do NOT assume INS bias stability.** Gyro and accel biases drift with temperature, vibration, and aging.
+
 ## Output Format
 Structure your response as:
 1. **Analysis**: Summarize the problem and root cause (if diagnosing)
