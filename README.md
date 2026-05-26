@@ -72,7 +72,7 @@ This repository includes domain-specific skills for robotics development and gen
 | `web-expert` | Full-stack web development for robotics dashboards and real-time interfaces |
 | `data-pipeline-architect` | Data pipeline design, ETL processes, and data infrastructure |
 | `linux-ubuntu-expert` | Linux/Ubuntu system administration, configuration, and troubleshooting |
-| `matlab-pro` | MATLAB code, Simulink models, and technical computing |
+| `matlab-expert` | MATLAB code, Simulink models, and technical computing help |
 
 ### Network & Communication Skills
 
@@ -86,6 +86,7 @@ This repository includes domain-specific skills for robotics development and gen
 
 | Skill | Description |
 |-------|-------------|
+| `cpp-expert` | C++ code review for bugs, security issues, and performance problems |
 | `cpp-misra-auditor` | C++ safety auditing and MISRA compliance for embedded systems |
 | `security-pentester` | Security assessments and vulnerability identification |
 | `robotics-security-auditor` | Robot security, sensor spoofing, actuator security, and secure ROS |

@@ -90,7 +90,7 @@ These thoughts mean STOP — you're rationalizing:
 This skill covers embedded and industrial networking protocols for robotics. It does NOT cover:
 - IP-based wired network design (use `network-engineer`)
 - Wireless networking and RF engineering (use `wireless-network-expert`)
-- General software development or driver writing (use `python-expert` or `cpp-pro`)
+- General software development or driver writing (use `python-expert` or `cpp-expert`)
 - Robot behavior or control algorithms (use `ros-robotics-expert`)
 - Hardware circuit design outside bus physical layer considerations
 

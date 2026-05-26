@@ -23,8 +23,8 @@ Remove the `model` field from all skill frontmatter files while preserving all o
 5. `fusion-filter-robotics-expert` - Remove `model: claude-opus-4.6`
 6. `gps-ins-localization-expert` - Remove `model: claude-opus-4.6`
 7. `python-expert` - Remove `model: swe`
-8. `cpp-pro` - Remove `model: claude-opus-4.6`
-9. `matlab-pro` - Remove `model: claude-sonnet-4.6`
+8. `cpp-expert` - Remove `model: claude-opus-4.6`
+9. `matlab-expert` - Remove `model: claude-sonnet-4.6`
 10. `linux-ubuntu-expert` - Remove `model: claude-sonnet-4.6`
 11. `data-pipeline-architect` - Remove `model: claude-opus-4.6`
 

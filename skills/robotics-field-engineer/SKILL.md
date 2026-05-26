@@ -69,7 +69,7 @@ These thoughts mean STOP — you're rationalizing:
 ## Skill Boundaries
 
 This skill covers robotics field deployment and infrastructure. It does NOT cover:
-- General software development (use `python-expert` or `cpp-pro`)
+- General software development (use `python-expert` or `cpp-expert`)
 - General DevOps without robotics context (use `devops-engineer`)
 - Robot behavior or control algorithms (use `ros-robotics-expert`)
 - Cloud infrastructure without robotics context (use `data-pipeline-architect`)

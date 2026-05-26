@@ -150,10 +150,10 @@ git add skills/python-expert/SKILL.md
 git commit -m "Remove model specification from python-expert skill"
 ```
 
-### Task 8: Remove model from cpp-pro
+### Task 8: Remove model from cpp-expert
 
 **Files:**
-- Modify: `skills/cpp-pro/SKILL.md:4`
+- Modify: `skills/cpp-expert/SKILL.md:4`
 
 - [ ] **Step 1: Remove model line from frontmatter**
 
@@ -166,14 +166,14 @@ Check that YAML frontmatter still has valid structure with `name`, `description`
 - [ ] **Step 3: Commit**
 
 ```bash
-git add skills/cpp-pro/SKILL.md
-git commit -m "Remove model specification from cpp-pro skill"
+git add skills/cpp-expert/SKILL.md
+git commit -m "Remove model specification from cpp-expert skill"
 ```
 
-### Task 9: Remove model from matlab-pro
+### Task 9: Remove model from matlab-expert
 
 **Files:**
-- Modify: `skills/matlab-pro/SKILL.md:4`
+- Modify: `skills/matlab-expert/SKILL.md:4`
 
 - [ ] **Step 1: Remove model line from frontmatter**
 
@@ -186,8 +186,8 @@ Check that YAML frontmatter still has valid structure with `name` and `descripti
 - [ ] **Step 3: Commit**
 
 ```bash
-git add skills/matlab-pro/SKILL.md
-git commit -m "Remove model specification from matlab-pro skill"
+git add skills/matlab-expert/SKILL.md
+git commit -m "Remove model specification from matlab-expert skill"
 ```
 
 ### Task 10: Remove model from linux-ubuntu-expert

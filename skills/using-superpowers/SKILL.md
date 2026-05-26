@@ -128,9 +128,9 @@ Superpowers includes specialized skills for specific domains:
 
 **Software Engineering:**
 - `python-expert` - Python code, debugging, optimization, and best practices
-- `cpp-pro` - C/C++ code review for bugs, security issues, logic errors, performance problems
+- `cpp-expert` - C/C++ code review for bugs, security issues, logic errors, performance problems
 - `cpp-misra-auditor` - C++ code review for safety and compliance, especially MISRA standards
-- `matlab-pro` - MATLAB code, Simulink models, and related technical problems
+- `matlab-expert` - MATLAB code, Simulink models, and related technical problems
 - `linux-ubuntu-expert` - Linux or Ubuntu system administration, configuration, troubleshooting
 - `security-pentester` - Security assessments, penetration testing, and vulnerability identification
 - `data-pipeline-architect` - Design, build, or optimize data pipelines and collection systems

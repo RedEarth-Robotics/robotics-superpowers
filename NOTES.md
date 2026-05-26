@@ -52,6 +52,6 @@ Installer dry-run confirms all 32 skills are detected (23 new to be linked, 8 al
 Committed and pushed 3 commits to main:
 1. Add 15 new skills and reorganize robotics-superpowers (main commit)
 2. Fix ROBOTICS marker file location and remove backup files
-3. Add cpp-pro ROBOTICS marker file
+3. Add cpp-expert ROBOTICS marker file
 
 Final state: 32 skills organized into 6 categories, all with proper ROBOTICS markers for installer compatibility.

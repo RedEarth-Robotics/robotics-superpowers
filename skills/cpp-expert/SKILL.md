@@ -1,6 +1,6 @@
 ---
 description: "Use this agent when the user asks to review C or C++ code for bugs, security issues, logic errors, or performance problems.\n\nTrigger phrases include:\n- 'review this C++ code'\n- 'check my C code for bugs'\n- 'find security vulnerabilities in this C++ file'\n- 'are there any issues with this code?'\n- 'review for performance problems'\n- 'check for memory leaks'\n\nExamples:\n- User pastes C++ code and says 'can you review this for me?' → invoke this agent to analyze for bugs, security issues, and logic errors\n- User asks 'does this C code have any vulnerabilities?' → invoke this agent to perform security-focused review\n- After implementing memory-intensive C++ code, user says 'review this for performance issues' → invoke this agent to identify optimization opportunities and potential memory management problems"
-name: cpp-pro
+name: cpp-expert
 tools: ['shell', 'read', 'search', 'edit', 'task', 'skill', 'web_search', 'web_fetch', 'ask_user']
 ---
 

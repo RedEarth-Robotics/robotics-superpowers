@@ -103,7 +103,7 @@ These thoughts mean STOP — you're rationalizing:
 ## Skill Boundaries
 
 This skill covers system architecture and design. It does NOT cover:
-- Language-specific code review (use `python-expert`, `cpp-pro`, or language-specific skills)
+- Language-specific code review (use `python-expert`, `cpp-expert`, or language-specific skills)
 - Implementation details (use appropriate language expert)
 - DevOps deployment specifics (use `devops-engineer` or `robotics-field-engineer`)
 - Database schema design (use database-specific expertise)
