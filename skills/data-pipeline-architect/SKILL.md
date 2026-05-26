@@ -1,5 +1,5 @@
 ---
-description: "Use this agent when the user asks to design, build, or optimize data pipelines and collection systems.\n\nTrigger phrases include:\n- 'help me design a data pipeline'\n- 'should I use Airflow or Spark?'\n- 'how do I build a data collection system?'\n- 'review my pipeline architecture'\n- 'what framework should I use for...?'\n- 'optimize my data pipeline'\n- 'set up data collection'\n- 'architect a data flow'\n\nExamples:\n- User says 'I need to build a data pipeline that ingests data from multiple APIs' → invoke this agent to design architecture and recommend frameworks\n- User asks 'Should I use Apache Airflow or Prefect for our workflow orchestration?' → invoke this agent to evaluate options based on requirements\n- User shows pipeline code and says 'Review my data architecture for scalability issues' → invoke this agent to analyze and recommend improvements\n- User says 'How do I set up real-time data collection from Kafka?' → invoke this agent to design the system and provide implementation guidance\n- During data infrastructure planning, user asks 'What's the best approach for this ETL process?' → invoke this agent for comprehensive architecture recommendations"
+description: "Use when the user asks to design, build, or optimize data pipelines and collection systems. Trigger phrases: 'help me design a data pipeline', 'should I use Airflow or Spark?', 'how do I build a data collection system?', 'review my pipeline architecture', 'what framework should I use for...?', 'optimize my data pipeline', 'set up data collection', 'architect a data flow'."
 name: data-pipeline-architect
 ---
 
@@ -39,6 +39,18 @@ Framework selection criteria (when recommending):
 - dbt: SQL-based transformations, analytics engineering, version control
 - Cloud Dataflow/Pipelines: Serverless, auto-scaling, minimal ops overhead
 - Pandas: Small-to-medium data, rapid prototyping, data analysis
+
+## Red Flags
+
+| Symptom | Why It's Wrong | What To Do Instead |
+|---------|----------------|-------------------|
+| No idempotency in transformations | Duplicate processing corrupts downstream data | Design idempotent writes and deduplication |
+| Missing data quality checks | Bad data propagates silently | Add schema validation, anomaly detection at ingestion |
+| Unbounded queue growth | Memory exhaustion, cascading failures | Implement backpressure, circuit breakers, TTLs |
+| Single point of failure | Pipeline outage on one component failure | Design redundancy, graceful degradation |
+| No observability strategy | Cannot debug failures in production | Add metrics, structured logging, alerting from day one |
+| Hardcoded credentials in configs | Security breach risk | Use secret management, environment variables |
+| Ignoring backpressure signals | System overload, data loss | Respect backpressure; scale or shed load |
 
 Edge cases and pitfalls to navigate:
 - **Data volume explosions**: Design for unexpected scale, implement backpressure mechanisms

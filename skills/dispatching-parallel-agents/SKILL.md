@@ -109,19 +109,17 @@ Do NOT just increase timeouts - find the real issue.
 Return: Summary of what you found and what you fixed.
 ```
 
-## Common Mistakes
+## Red Flags
 
-**❌ Too broad:** "Fix all the tests" - agent gets lost
-**✅ Specific:** "Fix agent-tool-abort.test.ts" - focused scope
-
-**❌ No context:** "Fix the race condition" - agent doesn't know where
-**✅ Context:** Paste the error messages and test names
-
-**❌ No constraints:** Agent might refactor everything
-**✅ Constraints:** "Do NOT change production code" or "Fix tests only"
-
-**❌ Vague output:** "Fix it" - you don't know what changed
-**✅ Specific:** "Return summary of root cause and changes"
+| Symptom | Why It's Wrong | What To Do Instead |
+|---------|----------------|-------------------|
+| "Fix all the tests" scope | Agent gets lost without focus | Dispatch one agent per test file or subsystem |
+| No error context provided | Agent wastes time finding the problem | Paste error messages and test names upfront |
+| No constraints on changes | Agent might refactor everything | Specify "Do NOT change production code" or "Fix tests only" |
+| Vague output request | You don't know what changed | Require "Return summary of root cause and changes" |
+| Dispatching parallel implementers | Agents edit same files, create conflicts | One implementer at a time; parallelize investigation only |
+| Agents share state/resources | Race conditions, corrupted files | Ensure agents work on independent files/subsystems |
+| Ignoring agent questions | Agent makes wrong assumptions | Answer clearly before letting agent proceed |
 
 ## When NOT to Use
 
