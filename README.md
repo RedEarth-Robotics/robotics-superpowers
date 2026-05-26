@@ -30,6 +30,23 @@ If you prefer manual setup, symlink individual skills from `skills/` into `~/.co
 - `--uninstall` — Remove all symlinks created by this installer
 - `--help` — Show usage information
 
+## Skills
+
+This repository includes 10 domain-specific skills for robotics development:
+
+| Skill | Description |
+|-------|-------------|
+| `ros-robotics-expert` | ROS (Robot Operating System) help for arms and mobile robots |
+| `robotics-localization-expert` | Localization, SLAM, GPS-based positioning, and pose estimation |
+| `robotics-odometry-expert` | Visual odometry, ground-based odometry, and drift analysis |
+| `robotics-data-analyzer` | Sensor data analysis, telemetry processing, and hardware diagnostics |
+| `robotics-devops-engineer` | Deployment, containerization, and CI/CD for robotics code |
+| `fusion-filter-robotics-expert` | Sensor fusion, Kalman filters, and multi-sensor integration |
+| `gps-ins-localization-expert` | GPS and INS integration for robotics localization |
+| `cpp-misra-auditor` | C++ safety auditing and MISRA compliance for embedded systems |
+| `security-pentester` | Security assessments and vulnerability identification |
+| `token-optimizer` | Token optimization via Yato MCP server integration |
+
 ## License
 
 MIT License - see LICENSE file for details
