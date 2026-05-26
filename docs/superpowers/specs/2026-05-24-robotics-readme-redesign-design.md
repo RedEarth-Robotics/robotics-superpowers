@@ -30,7 +30,7 @@ Rewrite the README with robotics-focused content while preserving the installati
   - `robotics-localization-expert` - Visual odometry, SLAM, GPS-based localization, sensor fusion
   - `robotics-odometry-expert` - Visual, ground-based, and underwater odometry systems
   - `robotics-data-analyzer` - Sensor data, perception systems, localization analysis
-  - `robotics-devops-engineer` - Deploy and containerize robotics code for production
+  - `robotics-field-engineer` - Field deployment and containerization for robotics systems
   - `fusion-filter-robotics-expert` - Kalman filters, sensor fusion, localization challenges
   - `gps-ins-localization-expert` - GPS and INS integration for robotics localization
 - **For each skill:** Brief description + key trigger phrases

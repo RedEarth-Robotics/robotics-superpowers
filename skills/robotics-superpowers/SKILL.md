@@ -52,7 +52,7 @@ These thoughts mean STOP — you're rationalizing:
 | "sensor data", "ROS bag", "perception", "analyze data", "telemetry", "sensor log" | `robotics-data-analyzer` |
 | "Kalman filter", "EKF", "UKF", "sensor fusion", "fuse GPS", "particle filter", "state estimation" | `fusion-filter-robotics-expert` |
 | "GPS", "INS", "RTK", "DGPS", "GPS denied", "inertial navigation", "GNSS" | `gps-ins-localization-expert` |
-| "deploy", "Docker", "Kubernetes", "CI/CD", "production robot", "containerize", "orchestrate" | `robotics-devops-engineer` |
+| "deploy", "Docker", "Kubernetes", "CI/CD", "production robot", "containerize", "orchestrate" | `robotics-field-engineer` |
 
 ## Skill Priority
 

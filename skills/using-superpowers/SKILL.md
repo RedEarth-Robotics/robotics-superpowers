@@ -122,7 +122,7 @@ Superpowers includes specialized skills for specific domains:
 - `robotics-localization-expert` - Robotics localization problems including visual odometry, SLAM, GPS-based localization
 - `robotics-odometry-expert` - Robotics odometry problems including visual odometry, ground-based odometry, underwater odometry
 - `robotics-data-analyzer` - Analyze robotics sensor data, perception systems, localization systems, vehicle hardware telemetry
-- `robotics-devops-engineer` - Deploy, containerize, and automate robotics code for production environments
+- `robotics-field-engineer` - Field deployment, containerization, and CI/CD for robotics field operations
 - `fusion-filter-robotics-expert` - Fusion filters, sensor fusion, and localization challenges in robotics systems
 - `gps-ins-localization-expert` - GPS and INS (Inertial Navigation System) integration for robotics localization
 

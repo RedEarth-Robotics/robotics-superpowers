@@ -26,7 +26,7 @@
 - Create: `skills/robotics-localization-expert/ROBOTICS`
 - Create: `skills/robotics-odometry-expert/ROBOTICS`
 - Create: `skills/robotics-data-analyzer/ROBOTICS`
-- Create: `skills/robotics-devops-engineer/ROBOTICS`
+- Create: `skills/robotics-field-engineer/ROBOTICS`
 - Create: `skills/fusion-filter-robotics-expert/ROBOTICS`
 - Create: `skills/gps-ins-localization-expert/ROBOTICS`
 - Create: `skills/cpp-misra-auditor/ROBOTICS`
@@ -41,7 +41,7 @@ touch skills/ros-robotics-expert/ROBOTICS
 touch skills/robotics-localization-expert/ROBOTICS
 touch skills/robotics-odometry-expert/ROBOTICS
 touch skills/robotics-data-analyzer/ROBOTICS
-touch skills/robotics-devops-engineer/ROBOTICS
+touch skills/robotics-field-engineer/ROBOTICS
 touch skills/fusion-filter-robotics-expert/ROBOTICS
 touch skills/gps-ins-localization-expert/ROBOTICS
 touch skills/cpp-misra-auditor/ROBOTICS

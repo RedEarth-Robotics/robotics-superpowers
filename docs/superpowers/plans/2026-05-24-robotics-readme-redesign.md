@@ -89,9 +89,9 @@ This fork includes 7 specialized robotics skills that integrate seamlessly with 
   - Covers: EKF, UKF, particle filters, multi-hypothesis tracking, observability analysis
 
 ### DevOps & Deployment
-- **`robotics-devops-engineer`** — Deploy and containerize robotics code for production
-  - *Trigger:* "help me deploy this robotics code", "containerize our robotics application", "set up a CI/CD pipeline for our robot"
-  - Covers: Docker, Kubernetes, Ansible, CI/CD, hardware-in-the-loop testing
+- **`robotics-field-engineer`** — Field deployment and containerization for robotics systems
+  - *Trigger:* "help me deploy this robotics code to field robots", "containerize our robotics application", "set up a CI/CD pipeline for our robot fleet"
+  - Covers: Docker, Kubernetes, Ansible, CI/CD, hardware-in-the-loop testing, field operations
 ```
 
 - [ ] **Step 4: Write yato integration section**

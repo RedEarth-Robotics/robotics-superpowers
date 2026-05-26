@@ -379,10 +379,10 @@ git commit -m "Add Red Flags, boundaries, and anti-patterns to gps-ins-localizat
 
 ---
 
-### Task 7: Refine robotics-devops-engineer
+### Task 7: Refine robotics-field-engineer
 
 **Files:**
-- Modify: `skills/robotics-devops-engineer/SKILL.md`
+- Modify: `skills/robotics-field-engineer/SKILL.md`
 
 Add these 4 sections before the existing "Output Format Requirements" section (around line 56):
 
@@ -432,8 +432,8 @@ Focus on: build → test (HIL) → containerize → deploy → monitor. Stay wit
 **Step 4 — Verify and Commit:**
 
 ```bash
-git add skills/robotics-devops-engineer/SKILL.md
-git commit -m "Add Red Flags, boundaries, and anti-patterns to robotics-devops-engineer"
+git add skills/robotics-field-engineer/SKILL.md
+git commit -m "Add Red Flags, boundaries, and anti-patterns to robotics-field-engineer"
 ```
 
 ---

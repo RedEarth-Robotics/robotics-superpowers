@@ -76,7 +76,7 @@ This is not negotiable. This is not optional. You cannot rationalize your way ou
 | "sensor data", "ROS bag", "perception", "analyze data", "telemetry" | `robotics-data-analyzer` |
 | "Kalman filter", "EKF", "UKF", "sensor fusion", "fuse GPS" | `fusion-filter-robotics-expert` |
 | "GPS", "INS", "RTK", "DGPS", "GPS denied" | `gps-ins-localization-expert` |
-| "deploy", "Docker", "Kubernetes", "CI/CD", "production robot" | `robotics-devops-engineer` |
+| "deploy", "Docker", "Kubernetes", "CI/CD", "production robot" | `robotics-field-engineer` |
 
 #### Skill Priority
 When multiple skills could apply, use this order:
