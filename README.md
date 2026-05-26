@@ -30,7 +30,27 @@ Symlink individual skills from `skills/` into `~/.config/devin/skills/`.
 
 ## Skills
 
-32 skills organized into 6 categories:
+47 skills organized into 7 categories:
+
+### Workflow (15)
+
+| Skill | Description |
+|-------|-------------|
+| `brainstorming` | Explore user intent, requirements, and design before implementation |
+| `writing-plans` | Create implementation plans from specs before touching code |
+| `executing-plans` | Execute written implementation plans with review checkpoints |
+| `subagent-driven-development` | Execute implementation plans with independent parallel tasks |
+| `systematic-debugging` | Debug bugs, test failures, or unexpected behavior systematically |
+| `test-driven-development` | Write failing tests before implementing features or bugfixes |
+| `finishing-a-development-branch` | Complete development work and decide on merge/PR/cleanup |
+| `verification-before-completion` | Run verification commands before claiming work is complete |
+| `requesting-code-review` | Request code review after implementing major features |
+| `receiving-code-review` | Receive code review feedback with technical rigor |
+| `using-git-worktrees` | Create isolated workspaces via git worktrees for feature work |
+| `writing-skills` | Create, edit, or verify skills for deployment |
+| `using-superpowers` | Find and use skills before any response including clarifying questions |
+| `token-optimizer` | Minimize LLM token usage and maximize context quality |
+| `dispatching-parallel-agents` | Execute 2+ independent tasks without shared state |
 
 ### Robotics Core (7)
 
@@ -62,7 +82,7 @@ Symlink individual skills from `skills/` into `~/.config/devin/skills/`.
 | `software-architect` | System architecture, design patterns, architectural decisions |
 | `devops-engineer` | CI/CD, containerization, infrastructure automation, deployment |
 | `python-expert` | Python code review, debugging, optimization, best practices |
-| `cpp-pro` | C/C++ code review for bugs, security issues, performance |
+| `cpp-expert` | C/C++ code review for bugs, security issues, performance |
 | `rust-expert` | Rust code review, memory safety, embedded systems, async Rust |
 | `go-expert` | Go code review, concurrency, microservices, performance |
 | `java-expert` | Java code review, JVM tuning, Spring Boot, enterprise systems |
@@ -87,12 +107,6 @@ Symlink individual skills from `skills/` into `~/.config/devin/skills/`.
 | `cpp-misra-auditor` | C++ safety auditing, MISRA compliance for embedded systems |
 | `security-pentester` | Security assessments, vulnerability identification |
 | `robotics-security-auditor` | Robot security, sensor spoofing, actuator security, secure ROS |
-
-### Core (1)
-
-| Skill | Description |
-|-------|-------------|
-| `token-optimizer` | Token optimization via Yato MCP server integration |
 
 ## License
 
